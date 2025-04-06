@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- top nav bar design -->
+  <div class="nav">
+    <div><img src="images/Brand/logo-colored.png" alt="brand-logo"></div>
+    <div class="inputCat flex">
+      <input type="text" name="product" id="searchInput" placeholder="Search">
+
+      <select>
+        <option value="" disabled selected>All Category</option>
+        <option value="electronics">electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="equipments">Equipments</option>
+        <option value="kitchen">Kitchen</option>
+      </select>
+
+      <button>Submit</button>
+
+    </div>
+
+    <div class="nav-icons">
+      <div class="icon">
+        <img src="images/Layout/cont.png" alt="">
+        <p>Profile</p>
+      </div>
+      <div class="icon">
+        <img src="images/Layout/msg.png" alt="">
+        <p>Message</p>
+      </div>
+      <div class="icon">
+        <img src="images/Layout/heart.png" alt="">
+        <p>Orders</p>
+      </div>
+      <div class="icon">
+        <a href="cart.html"><img src="images/Layout/cart.png" alt=""></a>
+        <p>My Cart</p>
+      </div>
+    </div>
+  </div>
+  <div class="fcontainer">
+    <h2 class="cart-head">My Cart</h2>
+    <div class="cart-total">
+      <div class="cart-section brder">
+        <div id="cart-container"></div>
+        <div class="cart-buttons">
+          <a href="product.html"><button class="back-shop"><i class="fa-solid fa-arrow-left"></i> Back to shop</button></a>
+          <button id="remove">Remove all</button>
+        </div>
+      </div>
+      <div class="total-pric">
+        <div class="coupen-card brder">
+          <p>Have a coupen</p>
+          <div class="add-coupen">
+            <input type="text" name="" id="" placeholder="Add coupon">
+            <p>Apply</p>
+
+          </div>
+        </div>
+        <div class="coupen-card brder">
+          <div class="sdt">
+            <span>SubTotal:</span>
+            <span>$1403</span>
+          </div>
+          <div class="sdt">
+            <span>Discount:</span>
+            <span id="dis-red">14$</span>
+          </div>
+          <div class="sdt">
+            <span>Tax:</span>
+            <span id="tax-green">163$</span>
+          </div>
+          <div id="bord"></div>
+          <div class="sdt">
+            <span>Total:</span>
+            <span id="x-large">$3403</span>
+          </div>
+          <button class="checkout">Checkout</button>
+          <div class="payment-cards">
+            <img src="images/Misc/image 21.png" alt="">
+            <img src="images/Misc/Logo-1.png" alt="">
+            <img src="images/Misc/Logo-2.png" alt="">
+            <img src="images/Misc/Logo-3.png" alt="">
+            <img src="images/Misc/Logo.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="recommend-head">Saved For Later</div>
+    <div class="recommend-prod">
+      <div class="solo brder">
+        <div class="unique-prod">
+          <img src="images/product/cloth/1.png" alt="">
+        </div>
+
+        <span class="font-semibold">$10.30</span>
+        <div class="prod-in">
+          <span>T-shirts with multiple</span>
+          <span>colors, for men</span>
+        </div>
+
+      </div>
+      <div class="solo brder">
+        <div class="unique-prod">
+          <img src="images/product/cloth/3.png" alt="">
+        </div>
+
+        <span class="font-semibold">$10.30</span>
+        <div class="prod-in">
+          <span>T-shirts with multiple</span>
+          <span>colors, for men</span>
+        </div>
+
+      </div>
+      <div class="solo brder">
+        <div class="unique-prod">
+          <img src="images/product/cloth/7.png" alt="">
+        </div>
+
+        <span class="font-semibold">$10.30</span>
+        <div class="prod-in">
+          <span>T-shirts with multiple</span>
+          <span>colors, for men</span>
+        </div>
+
+      </div>
+      <div class="solo brder">
+        <div class="unique-prod">
+          <img src="images/product/cloth/6.png" alt="">
+        </div>
+
+        <span class="font-semibold">$10.30</span>
+        <div class="prod-in">
+          <span>T-shirts with multiple</span>
+          <span>colors, for men</span>
+        </div>
+
+      </div>
+      <div class="solo brder">
+        <div class="unique-prod">
+          <img src="images/product/cloth/5.png" alt="">
+        </div>
+
+        <span class="font-semibold">$10.30</span>
+        <div class="prod-in">
+          <span>T-shirts with multiple</span>
+          <span>colors, for men</span>
+        </div>
+
+      </div>
+    </div>
+    <div class="discount-offer">
+      <div class="pd-dis-content">
+        <div class="pd-heading">Super discount on more than 100 USD</div>
+        <div class="pd-sub-head">Have you gfkjln buy this just amazing things to buy here.</div>
+      </div>
+      <button id="shop">Shop Now</button>
+    </div>
+    <footer>
+      <div class="grid grid-cols-7 gap-8">
+        <div class="col-span-2 p-4 column">
+          <div><img src="images/Brand/logo-colored.png" alt=""></div>
+          <p class="info"> Best information about the company
+            gies here but now lorem ipsum is</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/sweeta-k-7103972a6/" target="_blank"><img
+                src="images/social/facebook3.png" alt="facebook-icon"></a>
+            <a href=""><img src="images/social/twitter3.png" alt="twitter3-icon"></a>
+            <a href="https://www.linkedin.com/in/sweeta-k-7103972a6/" target="_blank"><img
+                src="images/social/linkedin3.png" alt="linkedin3"></a>
+            <a href=""><img src="images/social/insta.png" alt="instagram-icon"></a>
+            <a href=""><img src="images/social/youtube3.png" alt="youtube-icon"></a>
+
+          </div>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">About</h3>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">Partnership</h3>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">Information</h3>
+          <p>Help Center</p>
+          <p>Money Refund</p>
+          <p>Shipping</p>
+          <p>Contact us</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">For users</h3>
+          <p>Login</p>
+          <p>Register</p>
+          <p>Settings</p>
+          <p>My Orders</p>
+        </div>
+        <div class="app-column p-4">
+          <h3 class="font-semibold">Get app</h3>
+          <div class="social">
+            <i class="fa-brands fa-apple ic"></i>
+            <div class="download">
+              <p>Download on the</p>
+              <h3 class="font-semibold">App Store</h3>
+            </div>
+          </div>
+          <div class="social">
+            <i class="fa-brands fa-google-play"></i>
+            <div class="download">
+              <p>Get IT ON</p>
+              <h3 class="font-semibold">Google Play</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </footer>
+    <div class="border-b-2 border-gray-300 w-full"></div>
+    <div class="bottom-footer">
+      <p>&copy; 2023 Ecommerce.</p>
+      <p class="default-cs"><img src="images/flags/Property 1=US.png" alt="">
+        English <i class="fa-solid fa-chevron-up"></i></p>
+
+    </div>
+
+  </div>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="nav">
+    <div><img src="images/Brand/logo-colored.png" alt="brand-logo"></div>
+    <div class="inputCat flex">
+      <input type="text" name="product" id="searchInput" placeholder="Search">
+
+      <select>
+        <option value="" disabled selected>All Category</option>
+        <option value="electronics">electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="equipments">Equipments</option>
+        <option value="kitchen">Kitchen</option>
+      </select>
+
+      <button>Submit</button>
+
+    </div>
+
+    <div class="nav-icons">
+      <div class="icon">
+        <img src="images/Layout/cont.png" alt="">
+        <p>Profile</p>
+      </div>
+      <div class="icon">
+        <img src="images/Layout/msg.png" alt="">
+        <p>Message</p>
+      </div>
+      <div class="icon">
+        <img src="images/Layout/heart.png" alt="">
+        <p>Orders</p>
+      </div>
+      <div class="icon">
+        <a href="cart.html"><img src="images/Layout/cart.png" alt=""></a>
+        <p>My Cart</p>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom nav -->
+  <div class="border-b-2 border-gray-300 w-full"></div>
+
+  <div class="container">
+    <div class="bottom-nav">
+      <div class="nav-1">
+        <ul>
+          <li class="category"><img src="images/icons/Vector.png" alt=""><span>All Category</span></li>
+          <li>Hot offers</li>
+          <li>Gift boxes</li>
+          <li>Projects</li>
+          <li>Menu item</li>
+          <li><select name="help" id="">
+              <option value="query">Help</option>
+            </select></li>
+        </ul>
+      </div>
+      <div class="nav-2">
+        <div>
+          <select name="currency" id="">
+            <option value="usd">English, USD </option>
+          </select>
+        </div>
+        <div>
+          <p class="ship">Ship to <img src="images/flags/Property 1=DE.png" alt="country choosed for shipment"><select
+              name="#" id="ship">
+              <option value=""></option>
+            </select></p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="border-b-2 border-gray-300 w-full"></div>
+  <div class="fcontainer">
+    <div class="breadcrumb">
+      <ul>
+        <li><a href="#">Home </a><span>&#8250;</span> </li>
+        <li><a href="#">Clothings </a><span>&#8250;</span> </li>
+        <li><a href="#">Men Wear </a><span>&#8250;</span></li>
+        <li><a href="#">Summer Clothings </a></li>
+      </ul>
+    </div>
+    <div class="prod-cont">
+      <div class="p-sidebar">
+        <div class="filter-sec">
+          <div class="filter-hd" onclick="toggleSelection('category')">
+            Category <i class="fa-solid fa-chevron-up p_ic" id="arrow-category"></i>
+          </div>
+          <ul class="filter-options" id="category">
+            <li>Mobile accessory</li>
+            <li>Electronics</li>
+            <li>Smartphones</li>
+            <li>Modern tech</li>
+            <li><a href="#">See all</a></li>
+          </ul>
+        </div>
+        <div class="border-b-2 border-gray-300 w-full"></div>
+
+        <div class="filter-sec">
+          <div class="filter-hd" onclick="toggleSelection('brands')">
+            Brands <i class="fa-solid fa-chevron-up p_ic" id="arrow-brands"></i>
+          </div>
+          <ul class="filter-options" id="brands">
+            <li><input type="checkbox" value="Samsung"> Samsung</li>
+            <li><input type="checkbox" value="Apple"> Apple</li>
+            <li><input type="checkbox" value="Huawei"> Huawei</li>
+            <li><input type="checkbox" value="Pocco"> Pocco</li>
+            <li><input type="checkbox" value="Lenovo"> Lenovo</li>
+          </ul>
+        </div>
+        <div class="border-b-2 border-gray-300 w-full"></div>
+
+        <div class="filter-sec">
+          <div class="filter-hd" onclick="toggleSelection('features')">
+            Features <i class="fa-solid fa-chevron-up p_ic" id="arrow-features"></i>
+          </div>
+          <ul class="filter-options" id="features">
+            <li><input type="checkbox" value="Samsung"> Metallic</li>
+            <li><input type="checkbox" value="Apple"> Apple</li>
+            <li><input type="checkbox" value="Huawei"> Huawei</li>
+            <li><input type="checkbox" value="Pocco"> Pocco</li>
+            <li><input type="checkbox" value="Lenovo"> Lenovo</li>
+          </ul>
+        </div>
+        <div class="border-b-2 border-gray-300 w-full"></div>
+        <div class="filter-sec">
+          <div class="filter-hd" onclick="toggleSelection('cond')">
+            Condition <i class="fa-solid fa-chevron-up p_ic" id="arrow-cond"></i>
+          </div>
+          <ul class="filter-options" id="cond">
+            <li><input type="radio" value="Samsung">Any</li>
+            <li><input type="radio" value="Apple">Refurbished</li>
+            <li><input type="radio" value="Huawei">Brand new</li>
+            <li><input type="radio" value="Pocco">Old items</li>
+          </ul>
+        </div>
+        <div class="border-b-2 border-gray-300 w-full"></div>
+        <div class="filter-sec">
+          <div class="filter-hd" onclick="toggleSelection('price')">
+            Price Range <i class="fa-solid fa-chevron-up p_ic" id="arrow-price"></i>
+          </div>
+          <div id="price">
+            <div id="price-slider" class="mb-4"></div>
+
+            <div class="flex justify-between items-center">
+              <input type="number" id="minPrice" class="border p-1 w-20 rounded" placeholder="Min">
+              <input type="number" id="maxPrice" class="border p-1 w-20 rounded" placeholder="Max">
+            </div>
+
+            <button class="mt-3 w-full bg-blue-500 text-white py-1 rounded hover:bg-blue-600 transition">Apply</button>
+
+          </div>
+
+        </div>
+        <div class="border-b-2 border-gray-300 w-full"></div>
+
+        <div class="filter-sec">
+          <div class="filter-hd" onclick="toggleSelection('rating')">
+            Ratings<i class="fa-solid fa-chevron-up p_ic" id="arrow-rating"></i>
+          </div>
+          <ul class="filter-options" id="rating">
+            <li>
+              <input type="checkbox" value="Samsung">
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+            </li>
+            <li><input type="checkbox" value="Apple">
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li><input type="checkbox" value="Huawei">
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li><input type="checkbox" value="Pocco">
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+            <li><input type="checkbox" value="Lenovo">
+              <span class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="prod-inform">
+        <div class="prod-bar">
+          <div class="total">
+            12,144 items in <span class="font-semibold">Mobile Accessory</span>
+          </div>
+          <div class="view-sec">
+            <label for="#"><input type="checkbox" name="" id="">Verified only</label>
+            <select name="" id="">
+              <option value="#">Featured</option>
+            </select>
+            <div class="toggle-view">
+              <button onclick="toggleView('grid')"><img src="images/main-sec/t-grid.png" alt="" srcset=""></button>
+              <button onclick="toggleView('list')"><img src="images/main-sec/toggl.png" alt=""></i></button>
+            </div>
+          </div>
+
+        </div>
+        <div id="p-container">
+          <div class="product-card">
+            <img src="images/product/tech/1.png" alt="Product" class="product-image">
+            <div class="prod-info">
+              <h3 class="p-name">Canon Camera EOS 2000, Black 10x zoom</h3>
+              <p class="price"><strong>$998.00</strong> <span class="original-price">$1128.00</span></p>
+              <div class="rating">
+                <span class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+                <span class="rating-score">7.5</span>
+                <span class="orders">154 orders</span>
+                <span class="free-shipping">Free Shipping</span>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqu</p>
+              <p class="description-2">Canon Camera EOS 2000, Black 10x zoom</p>
+
+              <a href="#" class="details-link">View details</a>
+            </div>
+            <button class="heart-btn" onclick="toggleFavorite(this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="images/product/tech/5.png" alt="Product" class="product-image">
+            <div class="prod-info">
+              <h3 class="p-name">Canon Camera EOS 2000, Black 10x zoom</h3>
+              <p class="price"><strong>$998.00</strong> <span class="original-price">$1128.00</span></p>
+              <div class="rating">
+                <span class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+                <span class="rating-score">7.5</span>
+                <span class="orders">154 orders</span>
+                <span class="free-shipping">Free Shipping</span>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqu</p>
+              <p class="description-2">Canon Camera EOS 2000, Black 10x zoom</p>
+              <a href="#" class="details-link">View details</a>
+            </div>
+            <button class="heart-btn" onclick="toggleFavorite(this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="images/product/tech/7.png" alt="Product" class="product-image">
+            <div class="prod-info">
+              <h3 class="p-name">Canon Camera EOS 2000, Black 10x zoom</h3>
+              <p class="price"><strong>$998.00</strong> <span class="original-price">$1128.00</span></p>
+              <div class="rating">
+                <span class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+                <span class="rating-score">7.5</span>
+                <span class="orders">154 orders</span>
+                <span class="free-shipping">Free Shipping</span>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqu</p>
+              <p class="description-2">Canon Camera EOS 2000, Black 10x zoom</p>
+              <a href="#" class="details-link">View details</a>
+            </div>
+            <button class="heart-btn" onclick="toggleFavorite(this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="images/product/tech/8.png" alt="Product" class="product-image">
+            <div class="prod-info">
+              <h3 class="p-name">Canon Camera EOS 2000, Black 10x zoom</h3>
+              <p class="price"><strong>$998.00</strong> <span class="original-price">$1128.00</span></p>
+              <div class="rating">
+                <span class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+                <span class="rating-score">7.5</span>
+                <span class="orders">154 orders</span>
+                <span class="free-shipping">Free Shipping</span>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqu</p>
+              <p class="description-2">Canon Camera EOS 2000, Black 10x zoom</p>
+              <a href="#" class="details-link">View details</a>
+            </div>
+            <button class="heart-btn" onclick="toggleFavorite(this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="images/product/tech/3.png" alt="Product" class="product-image">
+            <div class="prod-info">
+              <h3 class="p-name">Canon Camera EOS 2000, Black 10x zoom</h3>
+              <p class="price"><strong>$998.00</strong> <span class="original-price">$1128.00</span></p>
+              <div class="rating">
+                <span class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+                <span class="rating-score">7.5</span>
+                <span class="orders">154 orders</span>
+                <span class="free-shipping">Free Shipping</span>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqu</p>
+              <p class="description-2">Canon Camera EOS 2000, Black 10x zoom</p>
+              <a href="#" class="details-link">View details</a>
+            </div>
+            <button class="heart-btn" onclick="toggleFavorite(this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+          <div class="product-card">
+            <img src="images/product/tech/2.png" alt="Product" class="product-image">
+            <div class="prod-info">
+              <h3 class="p-name">Canon Camera EOS 2000, Black 10x zoom</h3>
+              <p class="price"><strong>$998.00</strong> <span class="original-price">$1128.00</span></p>
+              <div class="rating">
+                <span class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </span>
+                <span class="rating-score">7.5</span>
+                <span class="orders">154 orders</span>
+                <span class="free-shipping">Free Shipping</span>
+              </div>
+              <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqu</p>
+              <p class="description-2">Canon Camera EOS 2000, Black 10x zoom</p>
+              <a href="#" class="details-link">View details</a>
+            </div>
+            <button class="heart-btn" onclick="toggleFavorite(this)">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="show-more">
+      <button id="show-more-btun">Show More <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="inline-butn">
+        <span><i class="fa-solid fa-chevron-up"></i></span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span><i class="fa-solid fa-chevron-up"></i></span>
+      </div>
+    </div>
+
+    <div class="subscribe">
+      <div class="sub-head">Subscribe on our newsletter</div>
+      <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+      <div class="email-subs">
+        <i class="fas fa-envelope"></i>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <button>Subscribe</button>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="grid grid-cols-7 gap-8">
+        <div class="col-span-2 p-4 column">
+          <div><img src="images/Brand/logo-colored.png" alt=""></div>
+          <p class="info"> Best information about the company
+            gies here but now lorem ipsum is</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/sweeta-k-7103972a6/" target="_blank"><img
+                src="images/social/facebook3.png" alt="facebook-icon"></a>
+            <a href=""><img src="images/social/twitter3.png" alt="twitter3-icon"></a>
+            <a href="https://www.linkedin.com/in/sweeta-k-7103972a6/" target="_blank"><img
+                src="images/social/linkedin3.png" alt="linkedin3"></a>
+            <a href=""><img src="images/social/insta.png" alt="instagram-icon"></a>
+            <a href=""><img src="images/social/youtube3.png" alt="youtube-icon"></a>
+
+          </div>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">About</h3>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">Partnership</h3>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">Information</h3>
+          <p>Help Center</p>
+          <p>Money Refund</p>
+          <p>Shipping</p>
+          <p>Contact us</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">For users</h3>
+          <p>Login</p>
+          <p>Register</p>
+          <p>Settings</p>
+          <p>My Orders</p>
+        </div>
+        <div class="app-column p-4">
+          <h3 class="font-semibold">Get app</h3>
+          <div class="social">
+            <i class="fa-brands fa-apple ic"></i>
+            <div class="download">
+              <p>Download on the</p>
+              <h3 class="font-semibold">App Store</h3>
+            </div>
+          </div>
+          <div class="social">
+            <i class="fa-brands fa-google-play"></i>
+            <div class="download">
+              <p>Get IT ON</p>
+              <h3 class="font-semibold">Google Play</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </footer>
+    <div class="border-b-2 border-gray-300 w-full"></div>
+    <div class="bottom-footer">
+      <p>&copy; 2023 Ecommerce.</p>
+      <p class="default-cs"><img src="images/flags/Property 1=US.png" alt="">
+        English <i class="fa-solid fa-chevron-up"></i></p>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

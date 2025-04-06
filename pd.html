@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="nav">
+    <div><img src="images/Brand/logo-colored.png" alt="brand-logo"></div>
+    <div class="pd-input-cont">
+      <input type="text" name="name" id="search-bar" placeholder="Search products here">
+      <i class="fa fa-search search-icon" id="search-butn"></i>
+    </div>
+
+    <div class="nav-icons">
+      <div class="icon">
+        <img src="images/Layout/cont.png" alt="">
+        <p>Profile</p>
+      </div>
+      <div class="icon">
+        <img src="images/Layout/msg.png" alt="">
+        <p>Message</p>
+      </div>
+      <div class="icon">
+        <img src="images/Layout/heart.png" alt="">
+        <p>Orders</p>
+      </div>
+      <div class="icon">
+        <a href="cart.html"><img src="images/Layout/cart.png" alt=""></a>
+        <p>My Cart</p>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom nav -->
+  <div class="border-b-2 border-gray-300 w-full"></div>
+
+  <div class="container">
+    <div class="bottom-nav">
+      <div class="nav-1">
+        <ul>
+          <li class="category"><img src="images/icons/Vector.png" alt=""><span>All Category</span></li>
+          <li>Hot offers</li>
+          <li>Gift boxes</li>
+          <li>Projects</li>
+          <li>Menu item</li>
+          <li><select name="help" id="">
+              <option value="query">Help</option>
+            </select></li>
+        </ul>
+      </div>
+      <div class="nav-2">
+        <div>
+          <select name="currency" id="">
+            <option value="usd">English, USD </option>
+          </select>
+        </div>
+        <div>
+          <p class="ship">Ship to <img src="images/flags/Property 1=DE.png" alt="country choosed for shipment"><select
+              name="#" id="ship">
+              <option value=""></option>
+            </select></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="border-b-2 border-gray-300 w-full"></div>
+  <div class="fcontainer">
+    <div class="pd-prod-cont">
+      <div class="product-details brder">
+        <img id="product-image" src="" alt="Product Image">
+        <div class="pd-cont">
+          <h2 id="product-name"></h2>
+          <div class="rating">
+            <span class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+            <span class="rating-score">7.5</span>
+            <span class="orders review"><a href="#customer">32 reviews</a></span>
+            <span class="free-shipping">Free Shipping</span>
+          </div>
+          <p id="product-price"></p>
+          <div class="pd-description">
+            <h2>Description</h2>
+            <p id="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt illum
+              magni veniam expedita rerum? Molestias fuga facilis quo a illum corporis. Quaerat, inventore. Asperiores
+              eum repellat error cumque ut!</p>
+            <p>Company <span id="cmp">Samsung</span></p>
+          </div>
+
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+      </div>
+      <div class="recommend-head">Related Products</div>
+      <div class="recommend-prod">
+        <div class="solo brder">
+          <div class="unique-prod">
+            <img src="images/product/cloth/1.png" alt="">
+          </div>
+
+          <span class="font-semibold">$10.30</span>
+          <div class="prod-in">
+            <span>T-shirts with multiple</span>
+            <span>colors, for men</span>
+          </div>
+
+        </div>
+        <div class="solo brder">
+          <div class="unique-prod">
+            <img src="images/product/cloth/3.png" alt="">
+          </div>
+
+          <span class="font-semibold">$10.30</span>
+          <div class="prod-in">
+            <span>T-shirts with multiple</span>
+            <span>colors, for men</span>
+          </div>
+
+        </div>
+        <div class="solo brder">
+          <div class="unique-prod">
+            <img src="images/product/cloth/7.png" alt="">
+          </div>
+
+          <span class="font-semibold">$10.30</span>
+          <div class="prod-in">
+            <span>T-shirts with multiple</span>
+            <span>colors, for men</span>
+          </div>
+
+        </div>
+        <div class="solo brder">
+          <div class="unique-prod">
+            <img src="images/product/cloth/6.png" alt="">
+          </div>
+
+          <span class="font-semibold">$10.30</span>
+          <div class="prod-in">
+            <span>T-shirts with multiple</span>
+            <span>colors, for men</span>
+          </div>
+
+        </div>
+        <div class="solo brder">
+          <div class="unique-prod">
+            <img src="images/product/cloth/5.png" alt="">
+          </div>
+
+          <span class="font-semibold">$10.30</span>
+          <div class="prod-in">
+            <span>T-shirts with multiple</span>
+            <span>colors, for men</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="cust-rev brder">
+        <div id="customer">
+          <div class="recommend-head">Review Section</div>
+          <div id="review-sec">
+          </div>
+        </div>
+        <div class="rev-design">
+          <div class="recommend-head">Add Your Review</div>
+
+          <div class="review-add-sec">
+            <input type="text" id="username" placeholder="Your Name">
+            <p>Ratings </p>
+            <div id="rating">
+              <span data-value="1">★</span>
+              <span data-value="2">★</span>
+              <span data-value="3">★</span>
+              <span data-value="4">★</span>
+              <span data-value="5">★</span>
+            </div>
+            <textarea id="review-input" placeholder="Write your review..."></textarea>
+            <button id="submit-review">Submit Review</button>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="discount-offer">
+      <div class="pd-dis-content">
+        <div class="pd-heading">Super discount on more than 100 USD</div>
+        <div class="pd-sub-head">Have you gfkjln buy this just amazing things to buy here.</div>
+      </div>
+      <button id="shop">Shop Now</button>
+    </div>
+    <footer>
+      <div class="grid grid-cols-7 gap-8">
+        <div class="col-span-2 p-4 column">
+          <div><img src="images/Brand/logo-colored.png" alt=""></div>
+          <p class="info"> Best information about the company
+            gies here but now lorem ipsum is</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/sweeta-k-7103972a6/" target="_blank"><img
+                src="images/social/facebook3.png" alt="facebook-icon"></a>
+            <a href=""><img src="images/social/twitter3.png" alt="twitter3-icon"></a>
+            <a href="https://www.linkedin.com/in/sweeta-k-7103972a6/" target="_blank"><img
+                src="images/social/linkedin3.png" alt="linkedin3"></a>
+            <a href=""><img src="images/social/insta.png" alt="instagram-icon"></a>
+            <a href=""><img src="images/social/youtube3.png" alt="youtube-icon"></a>
+
+          </div>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">About</h3>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">Partnership</h3>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">Information</h3>
+          <p>Help Center</p>
+          <p>Money Refund</p>
+          <p>Shipping</p>
+          <p>Contact us</p>
+        </div>
+        <div class="p-4 text-left column">
+          <h3 class="font-semibold">For users</h3>
+          <p>Login</p>
+          <p>Register</p>
+          <p>Settings</p>
+          <p>My Orders</p>
+        </div>
+        <div class="app-column p-4">
+          <h3 class="font-semibold">Get app</h3>
+          <div class="social">
+            <i class="fa-brands fa-apple ic"></i>
+            <div class="download">
+              <p>Download on the</p>
+              <h3 class="font-semibold">App Store</h3>
+            </div>
+          </div>
+          <div class="social">
+            <i class="fa-brands fa-google-play"></i>
+            <div class="download">
+              <p>Get IT ON</p>
+              <h3 class="font-semibold">Google Play</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </footer>
+    <div class="border-b-2 border-gray-300 w-full"></div>
+    <div class="bottom-footer">
+      <p>&copy; 2023 Ecommerce.</p>
+      <p class="default-cs"><img src="images/flags/Property 1=US.png" alt="">
+        English <i class="fa-solid fa-chevron-up"></i></p>
+
+    </div>
+
+
+  </div>
+  <script src="js/pd.js"></script>
+</body>
+
+</html>
